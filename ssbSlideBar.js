@@ -12,7 +12,15 @@ jetpack.slideBar.append({
   width: 350,
   onSelect: function(s) {
     s.slide(350, {persist: true});
+  },
+
+  onReady: function(s) {
+    var slidebarDoc = s.contentDocument;
+    $(slidebarDoc).find("input").click(function() {
+      jetpack.notifications.show("Hello Jetpack!");
+    });
   }
+
 });
 
 // vim:set ts=2 sw=2:
