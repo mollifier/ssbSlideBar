@@ -15,12 +15,25 @@ jetpack.slideBar.append({
   },
 
   onReady: function(s) {
-    var uri = "http://stack.nayutaya.jp/book/4774136689";
+    var getAsin = function(uri) {
+      var regex = new RegExp("(ASIN|asin|dp|product|book)/([0-9]{9}[0-9Xx])");
+      var match = uri.match(regex);
+      return (match === null ? null : match[2]);
+    }
+
+    var baseUri = "http://stack.nayutaya.jp/book/";
     var slidebarDoc = s.contentDocument;
+
     $(slidebarDoc).find("input").click(function() {
-      jetpack.tabs.focused.contentWindow.location.href =
-        uri + "?state=" + $(this).attr("value");
+      var focusedWindow = jetpack.tabs.focused.contentWindow;
+      var asin = getAsin(focusedWindow.location.href);
+      if (asin !== null) {
+        // load commit page
+        focusedWindow.location.href =
+          baseUri + asin + "?state=" + $(this).attr("value");
+      }
     });
+
   }
 
 });
