@@ -15,9 +15,10 @@ jetpack.slideBar.append({
   },
 
   onReady: function(s) {
+    var uri = "http://stack.nayutaya.jp/book/4774136689";
     var slidebarDoc = s.contentDocument;
     $(slidebarDoc).find("input").click(function() {
-      jetpack.notifications.show("Hello Jetpack!");
+      jetpack.notifications.show(uri + "?state=" + $(this).attr("value"));
     });
   }
 
