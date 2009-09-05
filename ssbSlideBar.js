@@ -1,6 +1,7 @@
 jetpack.future.import("slideBar");
 
 jetpack.slideBar.append({
+  icon: "http://stack.nayutaya.jp/images/icon/nayutaya.gif",
   html: "<h1>stack stock books slideBar</h1>" +
         "<div>" +
           "<input type='button' value='unread' />" +
