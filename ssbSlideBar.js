@@ -9,9 +9,9 @@ jetpack.slideBar.append({
           "<input type='button' value='wish' />" +
         "</div>",
 
-  width: 350,
+  width: 320,
   onSelect: function(s) {
-    s.slide(350, {persist: true});
+    s.slide(320, {persist: true});
   },
 
   onReady: function(s) {
