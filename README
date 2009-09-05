@@ -1,2 +1,24 @@
 ssb slideBar
 
+これは Stack Stock Books に本を登録するための
+Jetpack featureです。
+公式のブックマークレットの代わりとして使用できます。
+
+使い方
+1. ログインしている状態で Amazonの書籍ページや
+   はてなブックマークの商品ページを開く
+2. Jetpack slideBar の Stack Stock Books アイコンをクリックし、
+   slideBar を開く
+3. 任意のボタンを押す。
+   ボタンと登録ステータスの対応は以下。
+       unread : まだ読んでいない
+       reading : いま読んでいる
+       read : もう読み終えた
+       wish : いつか欲しい
+4. まだ本を登録していない場合は「登録」を、
+   既に本を登録している場合は「更新」を選択して
+   状態を更新する。
+
+Stack Stock Books は、ゆる～い感じの読書管理システムです
+http://stack.nayutaya.jp/
+
