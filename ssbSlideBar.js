@@ -1,16 +1,8 @@
-(function() {
-  jetpack.statusBar.append({
-    html: "disA",
-    width: 60,
-    onReady: function(widget) {
-      $(widget).click(function() {
-        $(jetpack.tabs.focused.contentDocument).
-          find("a").each(function() {
-            $(this).replaceWith($(this).html());
-          });
-      });
-    }
-  });
-})();
+jetpack.future.import("slideBar");
+
+jetpack.slideBar.append({
+  html: "<h1>slideBar sample</h1>",
+  width: 350
+});
 
 // vim:set ts=2 sw=2:
